@@ -75,3 +75,11 @@ def stop(self):
   self.right_speed = 0
   self.pwm[0].ChangeDutyCycle(self.left_speed)
   self.pwm[1].ChangeDutyCycle(self.right_speed)
+  
+  def setAngle(angle):
+    duty = angle / 18 + 3
+    GPIO.output(11, True)
+    pwm.ChangeDutyCycle(duty)
+    sleep(1)
+    GPIO.output(11, False)
+    pwm.ChangeDutyCycle(duty)
