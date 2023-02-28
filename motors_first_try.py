@@ -4,7 +4,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 class Robot():
 
- def __init__(self, *args, **kwargs):
+ def __init__(self, *args, **kwargs):                            #Initializing conditions
   super(Robot, self).__init__(*args, **kwargs)
   self.left_motor = [35,36]
   self.right_motor = [37,38]
