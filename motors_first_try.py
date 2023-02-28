@@ -12,7 +12,7 @@ class Robot():
   self.right_speed = 0
   GPIO.setup(32,GPIO.OUT)                                         #This is the PWM signal, setting up that pin as output
   GPIO.setup(33,GPIO.OUT)                                         #This is the PWM signal, setting up that pin as output
-  self.pwm=[GPIO.PWM(32,50),GPIO.PWM(33,50)]
+  self.pwm=[GPIO.PWM(32,50),GPIO.PWM(33,50)]                      #50 Hz PWM signal on that GPIO pin using the GPIO.PWM() function
   GPIO.setup(self.left_motor[0],GPIO.OUT,initial=GPIO.LOW)        #This is left motor forward
   GPIO.setup(self.right_motor[0],GPIO.OUT,initial=GPIO.LOW)       #This is right motor forward
   GPIO.setup(self.left_motor[1],GPIO.OUT,initial=GPIO.LOW)        #This is left motor backward
